@@ -14,6 +14,8 @@ if (isset($_POST['chars'])) {
         echo '<input type="button" value="Run Again"
             onClick="window.location.href=\'\'">';
         exit();
+    }else{
+        echo 'Captcha wrong<br>';
     }
 }
 ?>
@@ -26,8 +28,7 @@ if (isset($_POST['chars'])) {
 <img src="inc/captcha_img.php" style="border: 1px solid black"><br>
 
 <!-- Input Captcha characters -->
-Input captcha characters<br>
-<input name="chars" size="10" autofocus><br>
+<?php require('inc/captcha_input.php') ?>
 
 <input type="submit">
 
