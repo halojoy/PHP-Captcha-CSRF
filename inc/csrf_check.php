@@ -2,7 +2,7 @@
 
 // Test for valid csrf
 if ($_POST['csrf_code'] === $_SESSION['csrf_code']) {
-    $string = base64_decode($_POST['csrf_code']);
+    $string = $_POST['csrf_code'];
     $key  = substr(openssl_digest('hello little world', 'sha256'), 0, 32);
     $iv   = substr($string, -16, 16);
     $data = substr($string, 0, -16);
