@@ -35,7 +35,7 @@
         $font_color = imagecolorallocate($image, $r ,$g, $b);
     //CREATING CHARACTER WITH SELECTED FONT IN IMAGE
         imagettftext($image, $font_size, $o, $x, $y, $font_color,
-                dirname(__FILE__).'/fonts/ConsolaBold.ttf', $text[$i]);
+                dirname(__FILE__).'/fonts/ConsolasBold.ttf', $text[$i]);
     }
 
 //FOR LOOP FOR CREATING RANDOM LINES
