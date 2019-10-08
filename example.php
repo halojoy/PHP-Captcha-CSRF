@@ -3,7 +3,7 @@
 // Session start is needed
 session_start();
 
-if (isset($_POST['chars'])) {
+if (isset($_POST['submit'])) {
 
     // Check for valid CSRF code
     require('inc/csrf_check.php');
@@ -30,6 +30,6 @@ if (isset($_POST['chars'])) {
 <!-- Input Captcha characters -->
 <?php require('inc/captcha_input.php') ?>
 
-<input type="submit">
+<input type="submit" name="submit">
 
 </form>
