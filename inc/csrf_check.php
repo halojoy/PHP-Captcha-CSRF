@@ -10,7 +10,7 @@ if ($_POST['csrf_code'] === $_SESSION['csrf_code']) {
     $data = openssl_decrypt($code, 'aes-256-ctr', $key, 0, $iv);
     $ex = explode('|', $data);
     if ((time() - $ex[0]) <= 300)
-        if ($_SERVER['REMOTE_ADDR'] === $ex[1])
+        if ((require('inc/getip.php')) === $ex[1])
             return;
 }
 exit('Invalid CSRF code');
